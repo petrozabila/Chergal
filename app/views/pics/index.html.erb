@@ -1,0 +1,32 @@
+<div class="jumbotron">
+  <div class="page-header">
+    <h1>Фотографії<small>    всі категорії</small></h1>
+  </div>
+
+
+
+<div class='row'>
+    <% @pics.each do |pic| %>
+      <div class="col-sm-12 col-md-4">
+          <div class="thumbnail">
+            <% if (pic.image).blank?  %>
+            <%= image_tag('blank.gif', style:'width:150, height:200') %>
+            <% else %>
+                <%= link_to image_tag(pic.image, style:'width:150, height:200'), pic %>
+            <% end %>
+
+            <div class="caption">
+              <%= link_to pic.title, pic %><hr>
+              <p><%= sanitize( truncate pic.description, length: 101) %></p>
+              <%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+      </div>
+            <% end %>
+</div>
+        
+
+
+<div>
+<%= link_to 'New Pic', new_pic_path %>
+</div>

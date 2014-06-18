@@ -1,0 +1,33 @@
+<footer id='footer'>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="col-md-1"></div>
+
+    <div id='main_footer_menu' class="col-md-10">
+      <div class="col-md-4">
+        <ul class='footer_nav'>
+          <li>Навчання</li>
+          <li><%= link_to 'Головна сторінка', pics_path %></li>
+        </ul>
+      </div>
+
+      <div id='central_footer_menu' class="col-md-4">
+        <ul class='footer_nav'>
+          <li>Література</li>
+          <li><%= link_to 'Найпопулярніше', pics_path %></li>
+          <li><%= link_to 'Корзина', pics_path %></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class='footer_nav'>
+          <li>Форум</li>
+          <li><%= link_to 'Рубрики', pics_path %></li>
+          <li><%= link_to 'Остання тема', Pic.all.last %></li>
+          <li><%= link_to 'Правила форуму', '#' %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+  </nav>
+</footer>
