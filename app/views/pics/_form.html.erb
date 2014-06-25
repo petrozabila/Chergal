@@ -21,9 +21,10 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.select :category_id, [1, 2, 3 ] %>
-    <%= select_tag("category_id[]", @pic.category { |cat| cat.id})%>
+    <%= f.text_field :category_id %><br>
+
   </div>
+
   <div>
     <%= f.file_field :image %>
   </div>

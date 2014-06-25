@@ -1,6 +1,5 @@
 class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
-
   # GET /pics
   # GET /pics.json
   def index
@@ -17,6 +16,7 @@ class PicsController < ApplicationController
   # GET /pics/new
   def new
     @pic = Pic.new
+    @categories = Category.all
   end
 
   # GET /pics/1/edit
@@ -71,6 +71,6 @@ class PicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pic_params
-      params.require(:pic).permit(:title, :description, :image, :remote_image_url)
+      params.require(:pic).permit(:title, :description, :image, :category_id, :remote_image_url)
     end
 end

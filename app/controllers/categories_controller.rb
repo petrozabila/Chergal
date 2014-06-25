@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
-    @pics = Pic.where(params[:category_id])
+    @pics = Pic.where(category_id: @category.id) #@pics = @category.pics
   end
 
   # GET /categories/new

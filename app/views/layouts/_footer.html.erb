@@ -1,4 +1,4 @@
-<footer id='footer'>
+<footer id='footer' class="navbar">
   <nav class="navbar navbar-inverse" role="navigation">
     <div class="col-md-1"></div>
 
@@ -14,13 +14,13 @@
         <ul class='footer_nav'>
           <li>Література</li>
           <li><%= link_to 'Найпопулярніше', pics_path %></li>
-          <li><%= link_to 'Корзина', pics_path %></li>
+          <li><%= link_to 'Всі фото', pics_path %></li>
         </ul>
       </div>
 
       <div class="col-md-4">
         <ul class='footer_nav'>
-          <li>Форум</li>
+          <li>Фото</li>
           <li><%= link_to 'Рубрики', pics_path %></li>
           <li><%= link_to 'Остання тема', Pic.all.last %></li>
           <li><%= link_to 'Правила форуму', '#' %></li>
