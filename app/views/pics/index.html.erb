@@ -5,7 +5,7 @@
   </div>
 
 
-
+<%= will_paginate %>
 <div class='row'>
     <% @pics.each do |pic| %>
       <div class="col-sm-12 col-md-4">
@@ -25,6 +25,8 @@
       </div>
             <% end %>
             </div>
+
+            <%= will_paginate %>
 <div>
 <%= link_to 'New Pic', new_pic_path %>
 </div>

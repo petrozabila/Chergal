@@ -3,7 +3,7 @@ class PicsController < ApplicationController
   # GET /pics
   # GET /pics.json
   def index
-    @pics = Pic.all
+    @pics = Pic.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /pics/1

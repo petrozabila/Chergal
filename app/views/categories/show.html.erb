@@ -7,8 +7,10 @@
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
+<br>
 
 
+<%= will_paginate @pics %>
 <div class='row'>
         <% @pics.each do |pic| %>
             <div class="col-sm-12 col-md-4">
@@ -28,4 +30,7 @@
               </div>
             </div>
         <% end %>
+
+
       </div>
+ <%= will_paginate @pics %>     

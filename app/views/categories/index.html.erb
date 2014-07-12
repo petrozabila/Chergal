@@ -1,27 +1,21 @@
-<h1>Альбоми</h1>
+<div class="page-header">
+    <h1>Альбоми<small>    всі альбоми</small></h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Нозва альбому</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
     <% @categories.each do |category| %>
-      <tr>
-        <td><%= link_to category.name,  category %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <ul class="list-group">
+        <style type="text/css">
+            .list-group {
+              max-width: 350px;
+               }
+            </style>
 
+        <li class="list-group-item list-group-item-success"><%= link_to category.name,  category %></li>
+        <li class="list-group-item"><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    <% end %>
+ 
 <br>
 
 <%= link_to 'Створити новий', new_category_path %>
