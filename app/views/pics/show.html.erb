@@ -5,12 +5,12 @@
     <h4 class='level_h4'>Опис фото</h4>
     <div class='product_content'>
     	<p>
-		  <strong>Title:</strong>
+		  <strong>Назва:</strong>
 		  <%= @pic.title %>
 		</p>
 
       <div class='product_image'>
-        <%= image_tag @pic.image_url(:thumb).to_s, style:'max-width:1200px; max-height:600px' %>
+        <%= image_tag @pic.image_url, style:'max-width:1000px; max-height:700px' %>
       </div>
 
       <div class='info_content'>
