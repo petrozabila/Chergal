@@ -17,9 +17,9 @@
               <div class="thumbnail">
 
                 <% if (pic.image).blank? %>
-                    <%= image_tag('blank.gif', class:'product_image', width:'150', height:'200') %>
+                    <%= image_tag('blank.gif', class:'product_image', width:'300', height:'300') %>
                 <% else %>
-                    <%= link_to image_tag(pic.image, class:'product_image', width:'150', height:'200'), pic %>
+                    <%= link_to image_tag(pic.image, class:'product_image', width:'250', height:'250'), pic %>
                 <% end %>
 
                 <div class="caption">
